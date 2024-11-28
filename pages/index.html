@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="../src/other-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Nav-bar -->
+    <nav class="p-3 flex bg-white justify-between items-center div-cont">
+      <!-- logo first child -->
+      <a href="#" id="brand" class="flex gap-2 items-center">
+        <img
+          class="object-cover max-h-12"
+          src="../assets/logo.png"
+          alt="Logo"
+        />
+      </a>
+      <!-- menu 2nd child -->
+
+      <div id="navMenu" class="hidden md:flex gap-4">
+        <a href="#" class="font-medium hover:text-primary">Gi Bud</a>
+        <a href="#" class="font-medium hover:text-primary">Selge Bil</a>
+        <a href="#" class="font-medium hover:text-primary">Våre Biler</a>
+        <a href="#" class="font-medium hover:text-primary">Auksjonsvilkår</a>
+      </div>
+
+      <!-- Button 3rd child -->
+
+      <button
+        class="hidden md:flex gap-1 justify-center items-center border border-gray-400 p-2 px-6 py-2 rounded hover:border-gray-800"
+      >
+        <span class="font-medium p-1 font-display">Electron developer</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <!-- Btn for mobile_nav -->
+      <button class="p-2 md:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+
+      <!-- Nav-Dilag inset-0 -->
+      <div
+        id="nav-dilag"
+        class="hidden p-3 bg-white fixed z-20 inset-0 md:hidden"
+      >
+        <!-- horzental -->
+        <div id="nav-bar " class="flex justify-between items-center">
+          <a href="#" id="brand" class="flex gap-2 items-center">
+            <img
+              class="object-cover max-h-12"
+              src="../assets/logo.png"
+              alt="Logo"
+            />
+          </a>
+
+          <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+        <!-- verticle -->
+
+        <div class="mt-3">
+          <a href="#" class="block font-medium p-3 m-3 hover:bg-gray-100"
+            >Gi Bud</a
+          >
+          <a href="#" class="block font-medium p-3 m-3 hover:bg-gray-100"
+            >Selge Bil</a
+          >
+          <a href="#" class="block font-medium p-3 m-3 hover:bg-gray-100"
+            >Våre Biler</a
+          >
+          <a href="#" class="block font-medium p-3 m-3 hover:bg-gray-100"
+            >Auksjonsvilkår</a
+          >
+        </div>
+
+        <!-- div for line -->
+        <div class="h-[1px] bg-gray-200"></div>
+
+        <!-- Btn -->
+        <button
+          class="flex gap-1 items-center p-2 px-6 mt-6 w-full rounded hover:bg-gray-100"
+        >
+          <span class="font-medium p-1 font-display">Electron developer</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero section -->
+      <section
+        class="min-h-[70vh] relative bg-gradient-to-r from-purple-600 to-blue-600 text-white overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <img
+            src="../assets/1-main.jpg"
+            alt="Background Image"
+            class="object-cover object-center w-full h-full"
+          />
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+
+        <div class="div-cont absolute inset-0 z-10">
+          <div
+            class="w-full md:w-1/2 h-full flex flex-col gap-6 justify-center"
+          >
+            <!-- headings  -->
+            <div
+              id="headings "
+              class="flex flex-col gap-6 md:justify-start md:items-start md:text-start items-center text-center"
+            >
+              <h1 class="text-3xl font-light uppercase">Bilauksjon</h1>
+              <h1 class="banner uppercase text-primary">Ongsdag og sondag</h1>
+              <h1 class="text-2xl uppercase">hver uke</h1>
+              <h1 class="uppercase font-bold">Gi bud allerede i deg</h1>
+            </div>
+            <!-- buttons -->
+            <a
+              href="./contect.html"
+              class="btn-primary mx-6 md:mx-0 md:max-w-[170px] text-center"
+              >Contact us</a
+            >
+
+            <!-- working houres -->
+            <div
+              id="working-houres "
+              class="hidden mx-auto text-center mt-8 md:mx-0"
+            >
+              <h2
+                class="uppercase text-xl text-primary underline md:w-fit md:px-16"
+              >
+                working houres
+              </h2>
+              <table class="table-fixed text-center shadow-2xl w-80">
+                <tr class="">
+                  <th class="px-4 py-2 text-lg font-bold">Sunday</th>
+                  <td class="px-4 py-2">Closed</td>
+                </tr>
+                <tr class="">
+                  <th class="px-4 py-2 text-lg font-bold">Monday</th>
+                  <td class="px-4 py-2">9am - 5pm</td>
+                </tr>
+                <tr class="">
+                  <th class="px-4 py-2 text-lg font-bold">Tuesday</th>
+                  <td class="px-4 py-2">9am - 5pm</td>
+                </tr>
+                <tr class="">
+                  <th class="px-4 py-2 text-lg font-bold">Wednesday</th>
+                  <td class="px-4 py-2">9am - 5pm</td>
+                </tr>
+                <tr class="">
+                  <th class="px-4 py-2 text-lg font-bold">Thursday</th>
+                  <td class="px-4 py-2">9am - 5pm</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Auction -->
+      <section class="div-cont">
+        <h1 class="h1 mb-6">Auctions</h1>
+        <div
+          id="card-grid"
+          class="grid gap-6 gap-x-8 md:grid-cols-3 lg:grid-cols-4"
+        >
+          <!-- cad-1  -->
+          <div
+            id="car-card"
+            class="w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+          >
+            <div id="img" class="mb-6 overflow-hidden relative">
+              <img
+                class="w-full border hover:scale-105 transition ease-linear"
+                src="../assets/2car.jpg"
+                alt=""
+              />
+              <a
+                href="
+              "
+              >
+                <i
+                  class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                ></i>
+              </a>
+            </div>
+
+            <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+            <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+            <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+          </div>
+          <!-- cad-1 end -->
+
+          <!-- cad-1  -->
+          <div
+            id="car-card"
+            class="w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+          >
+            <div id="img" class="mb-6 overflow-hidden relative">
+              <img
+                class="w-full border hover:scale-105 transition ease-linear"
+                src="../assets/2car.jpg"
+                alt=""
+              />
+              <a
+                href="
+                      "
+              >
+                <i
+                  class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                ></i>
+              </a>
+            </div>
+            <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+            <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+            <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+          </div>
+          <!-- cad-1 end -->
+
+          <!-- cad-1  -->
+          <div
+            id="car-card"
+            class="w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+          >
+            <div id="img" class="mb-6 overflow-hidden relative">
+              <img
+                class="w-full border hover:scale-105 transition ease-linear"
+                src="../assets/2car.jpg"
+                alt=""
+              />
+              <a
+                href="
+            "
+              >
+                <i
+                  class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                ></i>
+              </a>
+            </div>
+            <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+            <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+            <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+          </div>
+          <!-- cad-1 end -->
+
+          <!-- cad-1  -->
+          <div
+            id="car-card"
+            class="w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+          >
+            <div id="img" class="mb-6 overflow-hidden relative">
+              <img
+                class="w-full border hover:scale-105 transition ease-linear"
+                src="../assets/2car.jpg"
+                alt=""
+              />
+              <a
+                href="
+                    "
+              >
+                <i
+                  class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                ></i>
+              </a>
+            </div>
+            <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+            <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+            <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+          </div>
+          <!-- cad-1 end -->
+
+          <!-- cad-1  -->
+          <div
+            id="car-card"
+            class="w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+          >
+            <div id="img" class="mb-6 overflow-hidden relative">
+              <img
+                class="w-full border hover:scale-105 transition ease-linear"
+                src="../assets/2car.jpg"
+                alt=""
+              />
+              <a
+                href="
+            "
+              >
+                <i
+                  class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                ></i>
+              </a>
+            </div>
+            <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+            <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+            <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+          </div>
+          <!-- cad-1 end -->
+
+          <!-- cad-1  -->
+          <div
+            id="car-card"
+            class="w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+          >
+            <div id="img" class="mb-6 overflow-hidden relative">
+              <img
+                class="w-full border hover:scale-105 transition ease-linear"
+                src="../assets/2car.jpg"
+                alt=""
+              />
+              <a
+                href="
+                    "
+              >
+                <i
+                  class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                ></i>
+              </a>
+            </div>
+            <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+            <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+            <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+          </div>
+          <!-- cad-1 end -->
+        </div>
+      </section>
+
+      <!--  About us-->
+      <section class="bg-background">
+        <div class="div-cont">
+          <div
+            id="numbers"
+            class="w-full flex-col flex gap-6 md:flex-row justify-between"
+          >
+            <div class="flex flex-col justify-center items-center">
+              <span class="text-6xl uppercase">40K</span>
+              <span class="sm-primary">Registered Members</span>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <span class="text-6xl uppercase">40K</span>
+              <span class="sm-primary">Registered Members</span>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <span class="text-6xl uppercase">40K</span>
+              <span class="sm-primary">Registered Members</span>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+              <span class="text-6xl uppercase">40K</span>
+              <span class="sm-primary">Registered Members</span>
+            </div>
+          </div>
+        </div>
+
+        <hr class="bg-gray-400" />
+
+        <div class="div-cont">
+          <div class="px-8 py-7 flex flex-col gap-5 md:flex-row items-center">
+            <!-- left -->
+            <div id="left" class="md:w-1/2 pr-6">
+              <p class="sm-primary mb-6 text-xl">Auksjonen</p>
+              <h1 class="h1 text-4xl mb-8">Vi har faste Auksjonsdager</h1>
+              <p class="font-light mb-4">
+                Onsdag kl. <span class="font-semibold">18:00-20.00</span> og
+                Sondag kl. <span class="font-semibold">115:00-17.00</span>
+              </p>
+
+              <h1 class="text-xl text-primary mb-2">
+                Onsker du a legge inn forhandsbud pa bill ?
+              </h1>
+              <p class="font-light mb-4">
+                Du kan benytte vart skjema for a legge inn forhandsbud pa bill
+              </p>
+              <!-- <ul class="font-light list-disc ml-6">
+                <li class="pb-1.5">
+                  <span class="font-semibold">Year: </span>2023
+                </li>
+                <li class="pb-1.5">
+                  <span class="font-semibold">Year: </span>2023
+                </li>
+                <li class="pb-1.5">
+                  <span class="font-semibold">Year: </span>2023
+                </li>
+                <li class="pb-1.5">
+                  <span class="font-semibold">Year: </span>2023
+                </li>
+                <li class="pb-1.5">
+                  <span class="font-semibold">Year: </span>2023
+                </li>
+                <li class="pb-1.5">
+                  <span class="font-semibold">Year: </span>2023
+                </li>
+              </ul> -->
+
+              <div id="btns" class="mb-8">
+                <a href="" class="btn-primary mr-4 mb-3">Gi Bud</a>
+                <!-- <button class="btn-secandry">Submit Entry</button> -->
+              </div>
+
+              <p class="font-light mb-4">
+                Kom gjerne innom i god tid for auksjonen starter. Alle biler som
+                selges med 3 maneders garanti har en tilstandsrapport liggende i
+                bilen, her far du god informasjon om bilens takniske stand
+              </p>
+            </div>
+            <!-- right -->
+            <div id="right" class="flex-1 hidden md:block">
+              <img class="scale-110" src="../assets/thar2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How its work -->
+      <section class="div-cont mt-0 border">
+        <!-- headings  -->
+        <div class="flex flex-col justify-center items-center gap-2 mb-12">
+          <span class="sm-primary">Start now</span>
+          <h1 class="h1">How it Works</h1>
+        </div>
+
+        <!-- cards -->
+        <div class="flex flex-col gap-8 justify-between md:flex-row pb-24">
+          <!-- card1 -->
+          <div
+            class="relative flex flex-col gap-2 justify-center items-center text-center"
+          >
+            <img
+              class="w-44 hidden md:inline-block absolute top-[-6%] right-[-50%] -rotate-6"
+              src="../assets/arrow.png"
+              alt=""
+            />
+            <img src="../assets/1.svg" alt="" />
+            <h2 class="text-xl font-semibold">Registration and Account</h2>
+            <p class="font-light text-sm">
+              Search inventory of more than salvage used vehicles. Aliquam
+              sagittis pellentesque turpis egestas tincidunt. Integer mollis leo
+              lectus. .
+            </p>
+          </div>
+
+          <!-- card2 -->
+          <div
+            class="relative flex flex-col gap-2 justify-center items-center text-center"
+          >
+            <img
+              class="w-44 hidden md:inline-block absolute bottom-[-30%] transform -scale-y-100 right-[-20%] rotate-12"
+              src="../assets/arrow.png"
+              alt=""
+            />
+            <img src="../assets/2.svg" alt="" />
+            <h2 class="text-xl font-semibold">Lorem, ipsum dolor.</h2>
+            <p class="font-light text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              laboriosam perferendis sunt, culpa quos ipsum quidem perspiciatis
+              numquam beatae tenetur, magni illum aut labore distinctio unde
+              recusandae eius hic nostrum.
+            </p>
+          </div>
+
+          <!-- card3 -->
+          <div
+            class="flex flex-col gap-2 justify-center items-center text-center"
+          >
+            <img src="../assets/3.png" alt="" />
+            <h2 class="text-xl font-semibold">
+              than salvage used vehicles Account
+            </h2>
+            <p class="font-light text-sm">
+              Search inventory of more than salvage used vehicles. Aliquam
+              sagittis pellentesque turpis egestas tincidunt. Integer mollis leo
+              lectus. .
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+
+      <!-- newsletter -->
+
+      <section class="bg-primary text-white">
+        <div class="div-cont flex gap-6 flex-col md:flex-row lg:pb-0">
+          <!-- left  -->
+          <div id="left" class="flex flex-col gap-5 md:w-1/2">
+            <p class="font-semibold">Right into Mailbox</p>
+            <h1 class="text-3xl font-semibold">
+              Get the news by subscribing to our newsletter. Tips directly!
+            </h1>
+
+            <form class="flex flex-col gap-3 w-full px-6" action="#">
+              <input
+                class="rounded-lg px-4 py-2 text-gray-600 text-sm focus:outline-none"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <button
+                class="btn bg-black rounded-lg border-2 border-black hover:shadow-2xl hover:text-primary"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+          <!-- right  -->
+          <div id="right" class="hidden md:inline-block flex-1">
+            <img
+              class="lg:-translate-y-20 scale-[115%]"
+              src="../assets/car1.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="py-12">
+        <div class="div-cont sm:px-6 lg:px-8">
+          <div
+            class="mb-14 flex flex-col justify-center items-center sm:flex-row sm:items-center sm:justify-between max-sm:gap-8"
+          >
+            <h2
+              class="text-4xl text-center font-bold text-gray-900 lg:text-left"
+            >
+              Testimonials
+            </h2>
+            <!-- Slider controls -->
+            <div class="flex items-center gap-8 mt-4">
+              <button
+                id="slider-button-left"
+                class="swiper-button-prev group flex justify-center items-center border border-solid border-primary w-12 h-12 transition-all duration-500 rounded-full hover:bg-primary"
+                data-carousel-prev
+              >
+                <svg
+                  class="h-6 w-6 text-primary group-hover:text-white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                id="slider-button-right"
+                class="swiper-button-next group flex justify-center items-center border border-solid border-primary w-12 h-12 transition-all duration-500 rounded-full hover:bg-primary"
+                data-carousel-next
+              >
+                <svg
+                  class="h-6 w-6 text-primary group-hover:text-white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!--Slider wrapper-->
+          <div
+            class="lg:flex grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8 swiper mySwiper"
+          >
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide group bg-white border border-solid h-auto border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600"
+              >
+                <div
+                  class="flex items-center mb-9 gap-2 text-primary transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800"
+                >
+                  Pagedone is simply the best tool of investment in the market
+                  right now.
+                </p>
+                <div class="flex items-center gap-5">
+                  <img
+                    class="rounded-full object-cover"
+                    src="https://pagedone.io/asset/uploads/1696229969.png"
+                    alt="avatar"
+                  />
+                  <div class="grid gap-1">
+                    <h5
+                      class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                    >
+                      Jane D
+                    </h5>
+                    <span class="text-sm leading-6 text-gray-500">CEO </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600"
+              >
+                <div
+                  class="flex items-center mb-9 gap-2 text-primary transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800"
+                >
+                  I was hesitant to try pagedone at first, but I'm so glad I did
+                  - it's exceeded all of my expectations.
+                </p>
+                <div class="flex items-center gap-5">
+                  <img
+                    class="rounded-full object-cover"
+                    src="https://pagedone.io/asset/uploads/1696229994.png"
+                    alt="avatar"
+                  />
+                  <div class="grid gap-1">
+                    <h5
+                      class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                    >
+                      Harsh P.
+                    </h5>
+                    <span class="text-sm leading-6 text-gray-500"
+                      >Product Designer</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600"
+              >
+                <div
+                  class="flex items-center mb-9 gap-2 text-primary transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800"
+                >
+                  Pagedone stands out as the most user-friendly and effective
+                  solution I've ever used.
+                </p>
+                <div class="flex items-center gap-5">
+                  <img
+                    class="rounded-full object-cover"
+                    src="https://pagedone.io/asset/uploads/1696230027.png"
+                    alt="avatar"
+                  />
+                  <div class="grid gap-1">
+                    <h5
+                      class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                    >
+                      Alex K.
+                    </h5>
+                    <span class="text-sm leading-6 text-gray-500"
+                      >Design Lead</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600 slide-active:border-indigo-600"
+              >
+                <div
+                  class="flex items-center mb-9 gap-2 text-primary transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800"
+                >
+                  Pagedone is simply the best tool of investment in the market
+                  right now.
+                </p>
+                <div class="flex items-center gap-5">
+                  <img
+                    class="rounded-full object-cover"
+                    src="https://pagedone.io/asset/uploads/1696229969.png"
+                    alt="avatar"
+                  />
+                  <div class="grid gap-1">
+                    <h5
+                      class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                    >
+                      Jane D
+                    </h5>
+                    <span class="text-sm leading-6 text-gray-500">CEO </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600"
+              >
+                <div
+                  class="flex items-center mb-9 gap-2 text-primary transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800"
+                >
+                  I was hesitant to try pagedone at first, but I'm so glad I did
+                  - it's exceeded all of my expectations.
+                </p>
+                <div class="flex items-center gap-5">
+                  <img
+                    class="rounded-full object-cover"
+                    src="https://pagedone.io/asset/uploads/1696229994.png"
+                    alt="avatar"
+                  />
+                  <div class="grid gap-1">
+                    <h5
+                      class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                    >
+                      Harsh P.
+                    </h5>
+                    <span class="text-sm leading-6 text-gray-500"
+                      >Product Designer</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 w-full hover:border-indigo-600"
+              >
+                <div
+                  class="flex items-center mb-9 gap-2 text-primary transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.10326 1.31699C8.47008 0.57374 9.52992 0.57374 9.89674 1.31699L11.7063 4.98347C11.8519 5.27862 12.1335 5.48319 12.4592 5.53051L16.5054 6.11846C17.3256 6.23765 17.6531 7.24562 17.0596 7.82416L14.1318 10.6781C13.8961 10.9079 13.7885 11.2389 13.8442 11.5632L14.5353 15.5931C14.6754 16.41 13.818 17.033 13.0844 16.6473L9.46534 14.7446C9.17402 14.5915 8.82598 14.5915 8.53466 14.7446L4.91562 16.6473C4.18199 17.033 3.32456 16.41 3.46467 15.5931L4.15585 11.5632C4.21148 11.2389 4.10393 10.9079 3.86825 10.6781L0.940384 7.82416C0.346867 7.24562 0.674378 6.23765 1.4946 6.11846L5.54081 5.53051C5.86652 5.48319 6.14808 5.27862 6.29374 4.98347L8.10326 1.31699Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <p
+                  class="text-lg text-gray-500 leading-8 h-24 transition-all duration-500 mb-9 group-hover:text-gray-800"
+                >
+                  Pagedone stands out as the most user-friendly and effective
+                  solution I've ever used.
+                </p>
+                <div class="flex items-center gap-5">
+                  <img
+                    class="rounded-full object-cover"
+                    src="https://pagedone.io/asset/uploads/1696230027.png"
+                    alt="avatar"
+                  />
+                  <div class="grid gap-1">
+                    <h5
+                      class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600 swiper-slide-active:text-indigo-600"
+                    >
+                      Alex K.
+                    </h5>
+                    <span class="text-sm leading-6 text-gray-500"
+                      >Design Lead</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+  .div-cont {
+    @apply max-w-7xl  mx-auto px-6  md:px-8 py-12 md:py-14;
+  }
+  .btn {
+    @apply px-6 py-2 font-semibold  transition ease-linear border;
+  }
+  .btn-secandry {
+    @apply px-6 py-2 font-semibold  transition ease-linear  border-black border-2 hover:border-2 hover:bg-primary hover:border-primary hover:text-white;
+  }
+  .btn-primary {
+    @apply px-6  border-primary py-2 bg-primary font-semibold text-white hover:border-2    border-2 hover:border-black hover:bg-white hover:text-black transition ease-linear;
+  }
+  .banner {
+    @apply text-3xl font-semibold sm:text-5xl;
+  }
+
+  .h1 {
+    @apply text-2xl font-bold;
+  }
+  .sm-primary {
+    @apply text-sm font-semibold text-primary;
+  }
+  .btn-layout {
+    @apply px-3 py-3 flex justify-center items-center hover:bg-primary hover:border-primary hover:text-white;
+  }
+}
