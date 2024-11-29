@@ -31,6 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle layout
   const btnGrid = document.getElementById("btn-grid");
   const btnList = document.getElementById("btn-list");
+  const carCards = Array.from(document.getElementsByClassName("car-card"));
+  const carGrid = document.getElementById("card-grid");
+
   const classesPrimary = [
     "bg-primary",
     "bg-white",
@@ -39,15 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
     "border-gray-300",
     "text-black",
   ];
+  const classesCarGrid = ["md:grid-cols-2", "lg:grid-cols-3"];
 
   const toggle = () => {
     classesPrimary.forEach((cls) => btnGrid.classList.toggle(cls));
     classesPrimary.forEach((cls) => btnList.classList.toggle(cls));
+    classesCarGrid.forEach((cls) => carGrid.classList.toggle(cls));
+
+    carCards.forEach((card) => {
+      card.classList.toggle("flex");
+      card.querySelector("img").classList.toggle("h-full");
+    });
   };
   let clicked = true;
   btnGrid.addEventListener("click", (e) => {
     if (!clicked) {
       toggle();
+
       clicked = true;
     }
   });

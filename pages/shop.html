@@ -87,8 +87,8 @@
         <!-- 1/4 -->
         <div class="hidden md:inline-block w-1/4"></div>
         <!-- 3/4 -->
-        <div class="md:flex-1 md:w-3/4 rounded-xl bg-background w-full">
-          <div id="nav" class="flex gap-3 items-start justify-between">
+        <div class="md:flex-1 md:w-3/4 rounded-xl w-full py-9">
+          <div id="nav" class="flex gap-3 items-start justify-between mb-6">
             <!-- btn-group  -->
             <div>
               <div class="inline-flex rounded-md shadow-sm" role="group">
@@ -109,19 +109,11 @@
                 </button>
               </div>
             </div>
-            <!-- const classesPrimary = [
-            "bg-primary",
-            "border-primary",
-            "bg-white",
-            "text-white",
-            "border-gray-300",
-            "text-black",
-          ]; -->
-            <!-- Custom Dropdown -->
+
             <div class="relative transition">
               <button
                 id="dropdownButton"
-                class="min-w-[152px] px-2 py-2 border border-gray-600 rounded-md shadow-sm bg-white text-gray-700 text-sm flex justify-between items-center"
+                class="min-w-[152px] px-2 py-2 border border-gray-600 rounded-md shadow-sm bg-white text-gray-700 text-sm flex justify-between"
               >
                 <span> Select an option </span>
                 <i
@@ -131,11 +123,9 @@
               </button>
               <ul
                 id="dropdownList"
-                class="absolute border border-gray-300 rounded-md shadow-2xl bg-white hidden w-96 mt-4 transition scale-0 translate-x-4"
+                class="absolute border border-gray-300 rounded-md shadow-2xl bg-white hidden max-w-96 mt-4 transition scale-0 z-10 -translate-x-[50%]"
               >
-                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Optiasdjasdadn jwbdon 1ambdsjjhbsd
-                </li>
+                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Opt</li>
                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                   Option 2
                 </li>
@@ -144,6 +134,175 @@
                 </li>
               </ul>
             </div>
+          </div>
+
+          <!-- Grid -->
+          <div
+            id="card-grid"
+            class="grid gap-6 gap-x-8 md:grid-cols-2 lg:grid-cols-3 transition"
+          >
+            <!-- cad-1  -->
+            <div
+              class="car-card w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+            >
+              <div id="img" class="overflow-hidden relative">
+                <img
+                  class="w-full border hover:scale-105 transition ease-linearl object-cover"
+                  src="../assets/2car.jpg"
+                  alt=""
+                />
+                <a
+                  href="
+              "
+                >
+                  <i
+                    class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                  ></i>
+                </a>
+              </div>
+
+              <div class="pl-4 pt-3">
+                <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+                <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+                <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+              </div>
+            </div>
+            <!-- cad-1 end -->
+            <!-- cad-1  -->
+            <div
+              class="car-card w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+            >
+              <div id="img" class="overflow-hidden relative">
+                <img
+                  class="w-full border hover:scale-105 transition ease-linearl object-cover"
+                  src="../assets/2car.jpg"
+                  alt=""
+                />
+                <a
+                  href="
+              "
+                >
+                  <i
+                    class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                  ></i>
+                </a>
+              </div>
+
+              <div class="pl-4 pt-3">
+                <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+                <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+                <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+              </div>
+            </div>
+            <!-- cad-1 end -->
+            <!-- cad-1  -->
+            <div
+              class="car-card w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+            >
+              <div id="img" class="overflow-hidden relative">
+                <img
+                  class="w-full border hover:scale-105 transition ease-linearl object-cover"
+                  src="../assets/2car.jpg"
+                  alt=""
+                />
+                <a
+                  href="
+            "
+                >
+                  <i
+                    class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                  ></i>
+                </a>
+              </div>
+
+              <div class="pl-4 pt-3">
+                <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+                <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+                <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+              </div>
+            </div>
+            <!-- cad-1 end -->
+            <!-- cad-1  -->
+            <div
+              class="car-card w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+            >
+              <div id="img" class="overflow-hidden relative">
+                <img
+                  class="w-full border hover:scale-105 transition ease-linearl object-cover"
+                  src="../assets/2car.jpg"
+                  alt=""
+                />
+                <a
+                  href="
+            "
+                >
+                  <i
+                    class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                  ></i>
+                </a>
+              </div>
+
+              <div class="pl-4 pt-3">
+                <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+                <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+                <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+              </div>
+            </div>
+            <!-- cad-1 end -->
+            <!-- cad-1  -->
+            <div
+              class="car-card w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+            >
+              <div id="img" class="overflow-hidden relative">
+                <img
+                  class="w-full border hover:scale-105 transition ease-linearl object-cover"
+                  src="../assets/2car.jpg"
+                  alt=""
+                />
+                <a
+                  href="
+            "
+                >
+                  <i
+                    class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                  ></i>
+                </a>
+              </div>
+
+              <div class="pl-4 pt-3">
+                <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+                <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+                <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+              </div>
+            </div>
+            <!-- cad-1 end -->
+            <!-- cad-1  -->
+            <div
+              class="car-card w-full rounded-xl overflow-hidden bg-slate-100 shadow-xl"
+            >
+              <div id="img" class="overflow-hidden relative">
+                <img
+                  class="w-full border hover:scale-105 transition ease-linearl object-cover"
+                  src="../assets/2car.jpg"
+                  alt=""
+                />
+                <a
+                  href="
+            "
+                >
+                  <i
+                    class="rounded-lg hover:bg-primary py-3 px-3 text-white absolute bottom-2 right-2 fa-regular fa-eye"
+                  ></i>
+                </a>
+              </div>
+
+              <div class="pl-4 pt-3">
+                <a class="font-semibold text-xl hover:text-primary">Audi RS3</a>
+                <p>2020 · 18 175 km · 1 598 cm3 · Hibrid</p>
+                <p class="font-light mt-5 mb-14 md:mb-5">Auction Ended</p>
+              </div>
+            </div>
+            <!-- cad-1 end -->
           </div>
         </div>
       </div>
