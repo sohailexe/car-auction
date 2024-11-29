@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.querySelector("img").classList.toggle("h-full");
     });
   };
+
   let clicked = true;
   btnGrid.addEventListener("click", (e) => {
     if (!clicked) {
@@ -74,16 +75,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $("#car-search-by-brand-name .toggle-btn").on("click", function () {
     const targetId = $(this).attr("aria-controls");
-    $("#" + targetId).slideToggle(300);
+    $("#" + targetId).slideToggle(100);
 
     $("#car-search-by-brand-name ul")
       .not("#" + targetId)
-      .slideUp(300)
+      .slideUp(100)
       .addClass("hidden");
 
-    console.log(targetId);
     const isExpanded = $("#" + targetId).is(":visible");
     $(this).attr("aria-expanded", isExpanded);
+  });
+
+  // Search car by property
+  $("#car-search-by-property .toggle-btn").on("click", function () {
+    const targetId = $(this).attr("aria-controls");
+    const isExpanded =
+      $("#car-search-by-property #" + targetId).css("display") == "none";
+
+    $("#car-search-by-property #" + targetId).slideToggle(100);
+
+    const currentSpan = $(this).find("span");
+    currentSpan.html(isExpanded ? "-" : "+");
+    $("#car-search-by-property .toggle-btn").not(this).find("span").html("+");
+
+    $("#car-search-by-property ul")
+      .not("#" + targetId)
+      .slideUp(100)
+      .addClass("hidden");
   });
 
   // *************************
