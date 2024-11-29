@@ -85,9 +85,131 @@
     <section>
       <div class="div-cont flex gap-6">
         <!-- 1/4 -->
-        <div class="hidden md:inline-block w-1/4"></div>
+        <div
+          class="hidden md:inline-block w-1/4 rounded-xl shadow-2xl border px-6 py-8"
+        >
+          <div id="header" class="mb-3">
+            <h1 class="h1 lg:text-3xl mb-2">Filters:</h1>
+            <p class="uppercase font-light lg:text-2xl mb-3">Car Models</p>
+            <hr />
+          </div>
+          <div id="car-search-by-brand-name">
+            <!-- brand1  -->
+            <div id="toggle-1" class="font-light">
+              <button
+                class="toggle-btn flex justify-between w-full py-2 mb-2"
+                aria-controls="brand-1"
+              >
+                Audi <span>(5)</span>
+              </button>
+              <ul id="brand-1" class="hidden">
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--End brand1  -->
+
+            <!-- brand2  -->
+            <div id="toggle-2" class="font-light">
+              <button
+                class="toggle-btn flex justify-between w-full py-2 mb-2"
+                aria-controls="brand-2"
+              >
+                BMW <span>(3)</span>
+              </button>
+              <ul id="brand-2" class="hidden">
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--End brand2  -->
+
+            <!-- brand3  -->
+            <div id="toggle-3" class="font-light">
+              <button
+                class="toggle-btn flex justify-between w-full py-2 mb-2"
+                aria-controls="brand-3"
+              >
+                Tesla <span>(8)</span>
+              </button>
+              <ul id="brand-3" class="hidden">
+                <li class="">
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center py-3 rounded-xl mb-1 border"
+                  >
+                    aksdnskdn
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--End brand3  -->
+          </div>
+        </div>
         <!-- 3/4 -->
-        <div class="md:flex-1 md:w-3/4 rounded-xl w-full py-9">
+        <div
+          class="md:flex-1 md:w-3/4 rounded-xl w-full py-9 shadow-lg border px-6"
+        >
           <div id="nav" class="flex gap-3 items-start justify-between mb-6">
             <!-- btn-group  -->
             <div>
@@ -135,7 +257,6 @@
               </ul>
             </div>
           </div>
-
           <!-- Grid -->
           <div
             id="card-grid"
@@ -307,7 +428,7 @@
         </div>
       </div>
     </section>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="../script.js"></script>
   </body>
 </html>

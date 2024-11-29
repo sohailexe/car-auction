@@ -70,6 +70,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Search with car brand name toggle
+
+  $("#car-search-by-brand-name .toggle-btn").on("click", function () {
+    const targetId = $(this).attr("aria-controls");
+    $("#" + targetId).slideToggle(300);
+
+    $("#car-search-by-brand-name ul")
+      .not("#" + targetId)
+      .slideUp(300)
+      .addClass("hidden");
+
+    console.log(targetId);
+    const isExpanded = $("#" + targetId).is(":visible");
+    $(this).attr("aria-expanded", isExpanded);
+  });
+
   // *************************
   //   var swiper = new Swiper(".mySwiper", {
   //     slidesPerView: 3,
